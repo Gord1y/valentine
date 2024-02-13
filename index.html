@@ -2,73 +2,85 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valentine's Proposal</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine's Proposal to my babe Katya</title>
+  <meta property="og:title" content="Valentine's Proposal to my babe Katya" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://gord1y.github.io/valentine/" />
+  <meta property="og:image"
+    content="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.bu.edu%2Farticles%2F2022%2Fvalentines-messages-of-love-and-gratitude-to-friends%2F&psig=AOvVaw2mJBP7YSvEu8IBHga7t1MR&ust=1707937452328000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCIDo5PyAqYQDFQAAAAAdAAAAABAJ" />
+  <meta property="og:description" content="Will you be my Valentine?" />
+  <meta property="og:site_name" content="Valentine's Proposal to my babe Katya" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:alt" content="Valentine's Proposal to my babe Katya" />
 </head>
 
 <body>
-    <div class="container">
-        <div class="Mainprompt">
-            <img class="image" src="images/cute.gif"></img>
-            <div class="text">
-              <h1 class="hh" id="name">Hello, my love!</h1>
-              <p class="pp" id="question">Will you be my Valentine? </p>
-            </div>
-            <div class="buttons">
-                <button class="button no" id="no-button" onclick="showMessage('No')">No</button>
-                <button class="button yes"  onclick="showMessage('Yes')" id="yesButton">Yes</button>
-            </div>
-        </div>
+  <div class="container">
+    <div class="Mainprompt">
+      <img class="image" src="images/cute.gif"></img>
+      <div class="text">
+        <h1 class="hh" id="name">Hello, my dear Katusha!</h1>
+        <p class="pp" id="question">Will you be my Valentine? </p>
+      </div>
+      <div class="buttons">
+        <button class="button no" id="no-button" onclick="showMessage('No')">No</button>
+        <button class="button yes" onclick="showMessage('Yes')" id="yesButton">Yes</button>
+      </div>
     </div>
-    <script>
+  </div>
+  <script>
 
-      const button = document.getElementById('no-button');
+    const button = document.getElementById('no-button')
 
-      // Add event listener for mouseenter event
-      button.addEventListener('mouseenter', function() {
-          showMessage('No')
-      });
+    // Add event listener for mouseenter event
+    button.addEventListener('mouseenter', function () {
+      showMessage('No')
+    })
 
-      function showMessage(response) {
-  if (response === "No") {
-    const noButton = document.getElementById("no-button");
-    const container = document.querySelector(".container");
-    const maxWidth = window.innerWidth - noButton.offsetWidth;
-    const maxHeight = window.innerHeight - noButton.offsetHeight;
+    function showMessage(response) {
+      if (response === "No") {
+        const noButton = document.getElementById("no-button")
+        const container = document.querySelector(".container")
+        const maxWidth = window.innerWidth - noButton.offsetWidth
+        const maxHeight = window.innerHeight - noButton.offsetHeight
 
-    noButton.style.position = "absolute";
+        noButton.style.position = "absolute"
 
-    document.getElementsByClassName("image")[0].src = "images/gun.gif";
+        document.getElementsByClassName("image")[0].src = "images/gun.gif"
 
-    const randomX = Math.max(0, Math.floor(Math.random() * maxWidth));
-    const randomY = Math.max(0, Math.floor(Math.random() * maxHeight));
+        const randomX = Math.max(0, Math.floor(Math.random() * maxWidth))
+        const randomY = Math.max(0, Math.floor(Math.random() * maxHeight))
 
-    noButton.style.left = randomX + "px";
-    noButton.style.top = randomY + "px";
+        noButton.style.left = randomX + "px"
+        noButton.style.top = randomY + "px"
 
-    document.getElementById("question").textContent =
-      "Are you okay?";
-    document.getElementById("name").style.display = "none";
+        document.getElementById("question").textContent =
+          "Are you okay?"
+        document.getElementById("name").style.display = "none"
 
-  }
+      }
 
-  if (response === "Yes") {
-    document.getElementById("name").remove();
-    document.getElementById("no-button").remove();
+      if (response === "Yes") {
+        document.getElementById("name").remove()
+        document.getElementById("no-button").remove()
 
-    const yesMessage = document.getElementById("question");
-    yesMessage.textContent = "LOOOOOOVE YOU 😘";
-    yesMessage.style.display = "block";
-    yesMessage.style.fontStyle = "normal";
-    document.getElementsByClassName("image")[0].src = "images/kiss.gif";
+        const yesMessage = document.getElementById("question")
+        yesMessage.textContent = "LOOOOOOVE YOU 😘"
+        yesMessage.style.display = "block"
+        yesMessage.style.fontStyle = "normal"
+        document.getElementsByClassName("image")[0].src = "images/kiss.gif"
 
-    document.getElementById("yesButton").remove();
-  }
-}
-    </script>
+        document.getElementById("yesButton").remove()
+      }
+    }
+  </script>
 </body>
 
 </html>
